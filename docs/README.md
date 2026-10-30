@@ -30,4 +30,4 @@ Start with the project brief, then read the architecture and safety documents be
 
 ## Simple summary
 
-GhostShell is a Python command-line tool. It sends the text of a command you typed to a local Ollama model, shows a short ghost comment, and optionally explains the command. A separate safety module checks for risky patterns. The command runs only after you approve the exact command. The model is never allowed to run anything.
+GhostShell is a Python command-line tool with open AI at its core. It sends the text of a command you typed to a local open-weight model through Ollama, shows a short ghost comment, and optionally explains the command. A separate safety module checks for risky patterns. The command runs only after you approve the exact command. The model is never allowed to run anything.

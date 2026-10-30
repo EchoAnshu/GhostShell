@@ -30,9 +30,16 @@ GhostShell shows the exact command that would run, then asks for approval. The d
 
 The AI cannot approve, change, or run a command.
 
-### 5. Local inference
+### 5. Local inference with an open model
 
 The model runs through Ollama on the user's machine. The app does not call a cloud AI service. After the model is downloaded, the core experience works without an internet connection.
+
+The open-weight model is the core of the product, not a side feature:
+
+- The default model is qwen2.5:3b, and the user can change it.
+- The app needs no account and no API key.
+- The user can pick a smaller model for speed or a larger model for better answers.
+- There is no per-request bill.
 
 ### 6. Clear errors
 

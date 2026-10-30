@@ -2,11 +2,11 @@
 
 This file records the important choices and the reasons behind them. Add a new entry when a choice changes.
 
-## 1. Local model through Ollama
+## 1. Local open-weight model through Ollama
 
 **Decision:** Use Ollama and a local open-weight model.
 
-**Why:** It keeps command text on the user's machine, removes the need for an API key, and works offline after setup. It also lets the user switch models without a code change.
+**Why:** It keeps command text on the user's machine, removes the need for an API key, and works offline after setup. It also lets the user switch models without a code change. The open model is the core of the product, not a feature added on top.
 
 **Trade-off:** The user must install Ollama and download a model. A small model is less capable than a large cloud model.
 

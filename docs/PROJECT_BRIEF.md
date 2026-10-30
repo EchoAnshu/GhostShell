@@ -20,6 +20,8 @@ Build a small Python command-line tool that talks to a local open-weight model t
 
 A separate Python module checks for dangerous command patterns using ordinary rules. The model may add context, but it is not the safety layer. The user sees the exact command and must approve it before it runs.
 
+Open AI is not a feature added on top. It is the reason the tool can run on a laptop, keep command text local, work offline, and let the user change the model. The project does not need a hosted AI account or an API key.
+
 ## Who it is for
 
 - Students learning PowerShell and the command line.
@@ -38,6 +40,7 @@ A separate Python module checks for dangerous command patterns using ordinary ru
 7. Keep the model out of the execution path.
 8. Work offline after the model and dependencies are installed.
 9. Keep setup and daily use simple.
+10. Keep open AI at the core: an open-weight model, local inference, and a model the user can change.
 
 ## Non-goals
 
@@ -57,6 +60,8 @@ A separate Python module checks for dangerous command patterns using ordinary ru
 - It never executes model output.
 - It asks for approval before running a user command.
 - It gives a useful explanation without a long delay.
+- The model can be swapped without a code change.
+- It needs no account and no API key.
 - It stays readable and easy to change.
 
 ## What we will deliver

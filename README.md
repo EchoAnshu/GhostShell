@@ -15,6 +15,19 @@ No cloud account. No hidden uploads. No automatic execution. Just you, your term
 - **Offline after setup.** Once the model is downloaded, the core experience works without an internet connection.
 - **Light on your machine.** A small Python CLI, a local model, and plain ANSI colors. No browser, no account, no heavy framework.
 
+## Open AI at the core
+
+GhostShell is not a closed assistant with a ghost skin. The open model is the part that makes it work.
+
+- **Open-weight model.** The default brain is qwen2.5:3b, a model you can download and run through Ollama.
+- **Local inference.** The model runs on your machine, not on a server we control.
+- **No vendor lock-in.** Change the model with one setting. Use a smaller model on a weak laptop or a larger one when you need better answers.
+- **Offline after setup.** Disconnect the network and the core experience still works.
+- **No per-request bill.** There is no API meter and no account.
+- **Public code.** The CLI is small enough to read, change, and inspect.
+
+Why does that matter? A closed terminal assistant needs an account, a network call, and a third party holding your command text. GhostShell keeps the command on your laptop, lets you inspect the prompt, and lets you choose the model. The ghost is the personality. The open model is the engine.
+
 ## A quick look
 
 ```text

@@ -18,6 +18,12 @@
 
 Python is easy to read, quick to change, and has everything this project needs: HTTP requests, process execution, text handling, and a good testing story. The app is small, so a compiled language would add build steps without helping the user.
 
+## Open AI is the core
+
+The product depends on open pieces, not a closed API. Ollama is open source, the default model is open-weight, and inference runs on the user's machine. The model can be swapped with a setting. This is why the app can work offline, avoid an account, and avoid a per-request bill.
+
+The ghost is the personality. The open model is the engine.
+
 ## Why Ollama
 
 Ollama gives a simple local API for running open-weight models. It handles model downloads, keeps the model on the user's machine, and works without a cloud account. It is also easy to replace if the user wants a different model.
