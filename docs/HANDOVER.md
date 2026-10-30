@@ -3,15 +3,19 @@
 ## Current state
 
 - The repository exists on the local machine.
-- The documentation set is written.
+- The documentation set is written and committed on docs/project-foundation.
+- The branch has nine commits, from f689056 through 22c31d6.
 - The private memory folder contains the working rules, research, roadmap, and session log.
 - No application code has been written yet.
 - No remote repository has been connected.
+- No branch has been pushed because there is no remote.
 
 ## What exists
 
 ```text
 C:\theGhostShell\ghostshell
+  .editorconfig
+  .gitattributes
   .gitignore
   README.md
   docs/

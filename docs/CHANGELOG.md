@@ -10,6 +10,7 @@ All notable changes to GhostShell are recorded here. The format follows Keep a C
 - Project brief, features, architecture, stack, safety, development, testing, configuration, troubleshooting, decisions, and handover documents.
 - Private local memory folder for working notes and logs.
 - Repository ignore rules.
+- Editor and line ending rules for consistent text files.
 
 ### Changed
 
