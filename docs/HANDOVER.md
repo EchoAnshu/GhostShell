@@ -4,7 +4,7 @@
 
 - The repository exists on the local machine.
 - The documentation set is written and committed on docs/project-foundation.
-- The branch has nine commits, from f689056 through 22c31d6.
+- The branch has a series of reviewable commits, starting at f689056.
 - The private memory folder contains the working rules, research, roadmap, and session log.
 - No application code has been written yet.
 - No remote repository has been connected.
