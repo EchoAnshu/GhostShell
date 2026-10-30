@@ -11,7 +11,7 @@
 ## First setup
 
 ```powershell
-git clone <repository-url>
+git clone https://github.com/EchoAnshu/GhostShell.git
 cd ghostshell
 
 python -m venv .venv

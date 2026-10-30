@@ -7,8 +7,8 @@
 - The branch has a series of reviewable commits, starting at f689056.
 - The private memory folder contains the working rules, research, roadmap, and session log.
 - No application code has been written yet.
-- No remote repository has been connected.
-- No branch has been pushed because there is no remote.
+- The remote repository is https://github.com/EchoAnshu/GhostShell.
+- main and docs/project-foundation are pushed to the remote.
 
 ## What exists
 
@@ -43,7 +43,7 @@ C:\theGhostShell\ghostshell
 - Git 2.52.0.
 - Ollama 0.40.13 at http://127.0.0.1:11434.
 - No model installed at the time of this handover.
-- No GitHub remote connected.
+- GitHub remote connected to https://github.com/EchoAnshu/GhostShell.
 
 ## Next branch
 
@@ -93,7 +93,6 @@ Suggested order:
 - Which model should be the default after testing on the owner's laptop?
 - Should a future release allow a typed-phrase override for high-risk commands, or keep the hard block?
 - Should the app support cmd.exe in the first release?
-- Should the project be published on GitHub before or after the first working build?
 - What license should the project use?
 
 ## Handover checklist

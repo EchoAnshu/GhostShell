@@ -83,7 +83,7 @@ Read [docs/SAFETY.md](docs/SAFETY.md) for the full policy.
 These commands describe the first release. The source code is planned for the next branch, and this README will be updated when the build is ready to install.
 
 ```powershell
-git clone <repository-url>
+git clone https://github.com/EchoAnshu/GhostShell.git
 cd ghostshell
 
 python -m venv .venv
