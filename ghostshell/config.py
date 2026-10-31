@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 import os
 from collections.abc import Mapping
 from dataclasses import dataclass
@@ -35,8 +36,12 @@ class Config:
             raise ConfigError("The model name cannot be empty.")
         if self.timeout <= 0:
             raise ConfigError("The timeout must be greater than zero.")
+        if not math.isfinite(self.timeout):
+            raise ConfigError("The timeout must be a finite number.")
         if self.temperature < 0 or self.temperature > 2:
             raise ConfigError("The temperature must be between 0 and 2.")
+        if not math.isfinite(self.temperature):
+            raise ConfigError("The temperature must be a finite number.")
         return self
 
 
