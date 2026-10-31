@@ -43,6 +43,8 @@ class Terminal:
             raise TerminalError(f"Cannot start {self.shell}. Is PowerShell installed?") from exc
         except subprocess.TimeoutExpired as exc:
             raise TerminalTimeout("The command took too long and was stopped.") from exc
+        except OSError as exc:
+            raise TerminalError(f"Cannot run the command: {exc}") from exc
         return completed.returncode
 
     def _run_subprocess(self, command: str, timeout: float) -> subprocess.CompletedProcess[str]:

@@ -5,6 +5,7 @@ from ghostshell.config import Config
 from ghostshell.ollama import (
     OllamaClient,
     OllamaConnectionError,
+    OllamaError,
     OllamaModelError,
     OllamaResponseError,
     OllamaTimeoutError,
@@ -80,6 +81,24 @@ def test_timeout_is_clear():
     client = OllamaClient(Config(stream=False), FakeSession(error=requests.Timeout()))
     with pytest.raises(OllamaTimeoutError, match="did not answer"):
         client.chat([{"role": "user", "content": "hi"}])
+
+
+def test_unexpected_request_error_is_clear():
+    client = OllamaClient(
+        Config(stream=False),
+        FakeSession(error=requests.RequestException("bad request")),
+    )
+    with pytest.raises(OllamaError, match="request failed"):
+        client.chat([{"role": "user", "content": "hi"}])
+
+
+def test_unexpected_stream_request_error_is_clear():
+    client = OllamaClient(
+        Config(stream=True),
+        FakeSession(error=requests.RequestException("bad stream")),
+    )
+    with pytest.raises(OllamaError, match="request failed"):
+        client.chat([{"role": "user", "content": "hi"}], on_chunk=lambda chunk: None)
 
 
 def test_missing_model_names_the_pull_command():

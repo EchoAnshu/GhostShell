@@ -55,6 +55,15 @@ def test_command_timeout_is_reported():
         terminal.run("Get-ChildItem")
 
 
+def test_other_shell_errors_are_reported():
+    def runner(command, timeout):
+        raise PermissionError("denied")
+
+    terminal = Terminal(runner=runner)
+    with pytest.raises(TerminalError, match="Cannot run"):
+        terminal.run("Get-ChildItem")
+
+
 def test_default_runner_uses_shell_false(monkeypatch):
     captured = {}
 

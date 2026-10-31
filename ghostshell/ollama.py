@@ -67,6 +67,8 @@ class OllamaClient:
             raise OllamaTimeoutError(
                 "Ollama did not answer in time. Try a smaller model or a longer timeout."
             ) from exc
+        except requests.RequestException as exc:
+            raise OllamaError("Ollama request failed. Check the host setting.") from exc
         self._check_status(response)
         return response
 
@@ -171,6 +173,8 @@ class OllamaClient:
             raise OllamaTimeoutError(
                 "Ollama did not answer in time. Try a smaller model or a longer timeout."
             ) from exc
+        except requests.RequestException as exc:
+            raise OllamaError("Ollama request failed. Check the host setting.") from exc
 
         self._check_status(response)
         chunks: list[str] = []
