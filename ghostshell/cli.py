@@ -193,8 +193,8 @@ def run_cli(
         if lower == "/check":
             _show_status(console, config, client)
             continue
-        if lower.startswith("explain "):
-            command = line[len("explain ") :].strip()
+        if lower == "explain" or lower.startswith("explain "):
+            command = line[len("explain") :].strip()
             if not command:
                 console.error("Type a command after explain.")
                 continue

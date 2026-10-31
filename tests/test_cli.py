@@ -92,6 +92,14 @@ def test_explain_mode_never_runs_the_command():
     assert "beginner" in client.calls[0][0]["content"]
 
 
+def test_explain_without_a_command_shows_a_hint():
+    code, output, client, terminal = run(["explain", "/exit"])
+    assert code == 0
+    assert "Type a command after explain." in output
+    assert client.calls == []
+    assert terminal.runs == []
+
+
 def test_high_risk_command_is_blocked_before_the_model():
     code, output, client, terminal = run(["Remove-Item -Recurse .\\build"])
     assert code == 0
